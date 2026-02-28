@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Home | CardioGuard{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-shield-heart"></i> AI-Powered Cardio Screening
+                </span>
+                <h1 class="hero-title">
+                    Clarity for your heart.
+                    <span class="text-gradient">Confidence for tomorrow.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    CardioGuard analyzes vital signs and lifestyle signals to estimate cardiovascular risk with a
+                    transparent, data-driven approach.
+                </p>
+                <div class="hero-actions">
+                    <a href="{{ url_for('predict') }}" class="btn btn-cta btn-lg rounded-pill px-5">
+                        Start Prediction <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="{{ url_for('model_info') }}" class="btn btn-outline-ink btn-lg rounded-pill px-4">
+                        How It Works
+                    </a>
+                </div>
+                <div class="stats-strip">
+                    <div class="stat-card">
+                        <h3>11</h3>
+                        <p>Key Features</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>70%+</h3>
+                        <p>Model Accuracy</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>3</h3>
+                        <p>Risk Signals</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-card">
+                    <img src="https://media.istockphoto.com/id/1479732082/vector/vector-illustration-of-cardiology-concept-cardiologist-doctor-holds-magnifying-glass-and.jpg?s=612x612&w=0&k=20&c=rdeGRq_1HsBy56pHoRy8er32SWcEvmqNPSpSJnFUXqM="
+                        alt="Heart Health" class="img-fluid hero-image">
+                    <div class="hero-card-note">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Transparent risk explanation with every prediction.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Why CardioGuard</p>
+            <h2>Actionable insights, grounded in data</h2>
+            <p class="section-subtitle">Explore how the dataset, visualizations, and model logic come together.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4>Robust Dataset</h4>
+                    <p>Thousands of clinical records blending objective and subjective health indicators.</p>
+                    <a href="{{ url_for('about') }}" class="feature-link">Explore dataset <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-alt">
+                        <i class="fa-solid fa-chart-area"></i>
+                    </div>
+                    <h4>Visual Diagnostics</h4>
+                    <p>Interactive plots reveal trends, correlations, and class separation cues.</p>
+                    <a href="{{ url_for('visuals') }}" class="feature-link">See visuals <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-warm">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4>Explainable ML</h4>
+                    <p>Random Forest predictions paired with feature importance for transparency.</p>
+                    <a href="{{ url_for('model_info') }}" class="feature-link">Model logic <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

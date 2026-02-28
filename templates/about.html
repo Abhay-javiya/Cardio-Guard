@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}About Dataset | CardioGuard{% endblock %}
+
+{% block content %}
+<div class="container section-block mt-5">
+    <div class="section-header text-center">
+        <p class="eyebrow">Dataset Anatomy</p>
+        <h1>Understanding the 11 Variables</h1>
+        <p class="section-subtitle">
+            Features are grouped into Objective, Examination, and Subjective categories for balanced modeling.
+        </p>
+    </div>
+
+    <div class="data-shell">
+        <ul class="nav nav-pills justify-content-center pill-nav" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill" id="pills-obj-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-obj" type="button">Objective</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill" id="pills-exam-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-exam" type="button">Examination</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill" id="pills-subj-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-subj" type="button">Subjective</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-obj">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="data-card">
+                            <i class="fa-solid fa-calendar"></i>
+                            <h5>Age</h5>
+                            <p>Age of the patient.</p>
+                            <span class="chip">Days / Years</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="data-card">
+                            <i class="fa-solid fa-ruler-vertical"></i>
+                            <h5>Height</h5>
+                            <p>Height of the patient.</p>
+                            <span class="chip">cm</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="data-card">
+                            <i class="fa-solid fa-weight-scale"></i>
+                            <h5>Weight</h5>
+                            <p>Weight of the patient.</p>
+                            <span class="chip">kg</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="data-card">
+                            <i class="fa-solid fa-venus-mars"></i>
+                            <h5>Gender</h5>
+                            <p>Biological sex.</p>
+                            <span class="chip">Categorical</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-exam">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="data-card">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <h5>Systolic Blood Pressure</h5>
+                            <p>Top number (ap_hi). Pressure when the heart beats.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="data-card">
+                            <i class="fa-solid fa-heart"></i>
+                            <h5>Diastolic Blood Pressure</h5>
+                            <p>Bottom number (ap_lo). Pressure between beats.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="data-card">
+                            <i class="fa-solid fa-vial"></i>
+                            <h5>Cholesterol</h5>
+                            <p>1: Normal, 2: Above Normal, 3: Well Above Normal.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="data-card">
+                            <i class="fa-solid fa-cube"></i>
+                            <h5>Glucose</h5>
+                            <p>1: Normal, 2: Above Normal, 3: Well Above Normal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-subj">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="data-card">
+                            <i class="fa-solid fa-smoking"></i>
+                            <h5>Smoking</h5>
+                            <p>Patient smokes?</p>
+                            <span class="chip chip-muted">Binary</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="data-card">
+                            <i class="fa-solid fa-wine-glass"></i>
+                            <h5>Alcohol</h5>
+                            <p>Alcohol intake?</p>
+                            <span class="chip chip-muted">Binary</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="data-card">
+                            <i class="fa-solid fa-person-running"></i>
+                            <h5>Activity</h5>
+                            <p>Physical activity?</p>
+                            <span class="chip chip-muted">Binary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

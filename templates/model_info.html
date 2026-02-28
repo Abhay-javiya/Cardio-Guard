@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}How It Works | CardioGuard{% endblock %}
+
+{% block content %}
+<div class="container section-block mt-5">
+    <div class="section-header text-center">
+        <p class="eyebrow">Model Pipeline</p>
+        <h1>Inside the Risk Engine</h1>
+        <p class="section-subtitle">A quick tour of how CardioGuard turns raw data into a prediction.</p>
+    </div>
+
+    <div class="process-steps">
+        <div class="step-card">
+            <div class="step-index">01</div>
+            <div class="step-body">
+                <h4>Data Ingestion</h4>
+                <p>We load the Cardio dataset containing thousands of patient records, then clean and validate entries.</p>
+            </div>
+            <div class="step-icon">
+                <i class="fa-solid fa-file-csv"></i>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-index">02</div>
+            <div class="step-body">
+                <h4>Preprocessing</h4>
+                <p>Age is converted to years, categorical variables are encoded, and blood pressure outliers are filtered.</p>
+            </div>
+            <div class="step-icon">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-index">03</div>
+            <div class="step-body">
+                <h4>Random Forest Classifier</h4>
+                <p>An ensemble of decision trees votes on the final class, boosting stability and reducing overfitting.</p>
+            </div>
+            <div class="step-icon">
+                <i class="fa-solid fa-tree"></i>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-index">04</div>
+            <div class="step-body">
+                <h4>Evaluation</h4>
+                <p>We test on a 20% hold-out set and achieve around 72-73% accuracy.</p>
+            </div>
+            <div class="step-icon">
+                <i class="fa-solid fa-check-double"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for('visuals') }}" class="btn btn-outline-ink rounded-pill px-4">See Visual Evidence</a>
+    </div>
+</div>
+{% endblock %}
