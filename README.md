@@ -1,35 +1,95 @@
-# CardioGuard - Cardiovascular Disease Prediction
-
+## 🫀 CardioGuard – Cardiovascular Disease Prediction System
 ## 🏥 Overview
-CardioGuard is a production-ready Web Application that predicts the likelihood of cardiovascular disease using Machine Learning (Random Forest). It features a modern, responsive UI designed with a healthcare theme and provides instant risk analysis based on user health metrics.
 
-## 🚀 Features
-- **Machine Learning Backend**: Built with Flask and Scikit-Learn.
-- **Modern UI**: Glassmorphism design, responsive Layout, and smooth animations.
-- **Interactive Form**: Easy-to-use input for 11 health indicators.
-- **Immediate Results**: Real-time prediction with clear risk visualization.
+CardioGuard is a production-ready Machine Learning web application that predicts the likelihood of cardiovascular disease using a Random Forest Classifier.
+
+The system provides real-time risk analysis based on 11 health indicators through a modern, healthcare-themed responsive interface.
+
+This project demonstrates:
+
+End-to-end ML workflow
+
+Model deployment with Flask
+
+REST-style prediction API
+
+Cloud deployment readiness
+
+## 🚀 Live Demo
+
+🔗 (Add your Render link here after deployment)
+
+## ✨ Key Features
+
+🧠 Machine Learning Prediction Engine (Random Forest)
+
+⚡ Real-time prediction using AJAX (Fetch API)
+
+📊 Probability-based risk scoring
+
+🎨 Modern Glassmorphism UI Design
+
+📱 Fully Responsive Layout
+
+☁️ Cloud Deployment Ready (Render / Railway)
 
 ## 🛠️ Tech Stack
-- **Frontend**: HTML5, CSS3, Bootstrap 5, JavaScript (Fetch API)
-- **Backend**: Python (Flask)
-- **ML**: Scikit-Learn (Random Forest Classifier), Pandas, NumPy
-- **Deployment**: Render / Railway (gunicorn)
+🔹 Frontend
+
+HTML5
+
+CSS3
+
+Bootstrap 5
+
+JavaScript (Fetch API)
+
+🔹 Backend
+
+Python
+
+Flask
+
+Gunicorn (Production Server)
+
+🔹 Machine Learning
+
+Scikit-Learn (Random Forest Classifier)
+
+Pandas
+
+NumPy
+
+Joblib (Model Serialization)
+
+🔹 Deployment
+
+Render / Railway
 
 ## 📂 Project Structure
 ```
-/
-├── app.py                # Flask Application
+CardioGuard/
+│
+├── app.py                 # Flask Application
 ├── model/
-│   ├── train_model.py    # Script to train and save the model
-│   └── cardio_model.pkl  # Trained ML Model (Generated)
+│   └── cardio_model.pkl   # Pre-trained ML Model
+│
 ├── static/
-│   ├── css/style.css     # Custom Styles
-│   └── js/script.js      # Frontend Logic
+│   ├── css/
+│   ├── js/
+│   └── plots/
+│
 ├── templates/
-│   └── index.html        # Main Interface
-├── requirements.txt      # Dependencies
-├── Procfile              # Deployment Command
-└── README.md             # Documentation
+│   ├── home.html
+│   ├── about.html
+│   ├── predict.html
+│   ├── model_info.html
+│   └── visuals.html
+│
+├── requirements.txt
+├── Procfile
+├── .gitignore
+└── README.md
 ```
 
 ## ⚙️ Setup & Installation
@@ -71,9 +131,6 @@ Ensure you have Python 3.8+ installed.
    - **Build Command**: `pip install -r requirements.txt && python model/train_model.py` (Adding training here ensures model exists on cloud)
    - **Start Command**: `gunicorn app:app`
 5. **Deploy**: Click Create Web Service.
-
-## 📸 Screenshots
-*(Add screenshots here after running the app)*
 
 ## ⚠️ Disclaimer
 This application is for educational purposes only and should not be used as a substitute for professional medical diagnosis.
