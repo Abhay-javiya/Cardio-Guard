@@ -5,6 +5,9 @@ CardioGuard is a production-ready Machine Learning web application that predicts
 
 The system provides real-time risk analysis based on 11 health indicators through a modern, healthcare-themed responsive interface.
 
+Created by Abhay Javiya.
+
+
 This project demonstrates:
 
 End-to-end ML workflow
@@ -17,7 +20,7 @@ Cloud deployment readiness
 
 ## 🚀 Live Demo
 
-🔗 (Add your Render link here after deployment)
+🔗 https://cardio-guard-s94f.onrender.com
 
 ## ✨ Key Features
 

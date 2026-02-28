@@ -57,6 +57,13 @@ body::before {
     align-items: center;
 }
 
+.brand-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .brand-icon {
     width: 36px;
     height: 36px;
@@ -561,7 +568,74 @@ body::before {
 .site-footer {
     border-top: 1px solid rgba(15, 23, 42, 0.08);
     color: var(--muted);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem 0 2rem;
+}
+
+.footer-shell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.footer-brand {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(14, 165, 164, 0.15);
+    color: var(--teal-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.footer-brand h5 {
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 0.3rem;
+}
+
+.footer-brand p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.footer-links {
+    display: grid;
+    gap: 0.6rem;
+    justify-items: start;
+}
+
+.footer-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--teal);
+}
+
+.footer-meta {
+    text-align: right;
+    justify-self: end;
+}
+
+.footer-meta p {
+    margin: 0.3rem 0;
+    color: var(--muted);
 }
 
 .fs-7 {
@@ -584,5 +658,14 @@ body::before {
 
     .side-panel {
         position: static;
+    }
+
+    .footer-shell {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .footer-meta {
+        text-align: left;
     }
 }
